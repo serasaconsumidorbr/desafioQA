@@ -13,7 +13,7 @@ Como e por que você as escolheu e com quais outras alternativas você está fam
  
 Você possui um marketplace de produtos financeiros. A disponibilização desses produtos ocorre por meio de integrações com várias instituições financeiras através de microservices.
 Esses microservices acessam uma base de dados previamente cadastradas pelas instituições financeiras.
-Para que um produto um produto seja exibido no seu marketplace você precisa ao menos que um dos parceiros te envie os dados para realizar cadastro prévio em dois locais distintos.
+Para que um produto seja exibido no seu marketplace você precisa ao menos que um dos parceiros te envie os dados para realizar cadastro prévio em dois locais distintos.
 Em algum momento esses dados não são disponibilizados pelas instituições financeiras, impossibilitando que esse produto seja exibido no seu marketplace.
  
 Considerando o problema descrito acima, qual solução você daria para que a dependência dos dados enviados pelas instituições financeiras não fosse um problema?
