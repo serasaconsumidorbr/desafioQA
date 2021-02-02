@@ -1,24 +1,69 @@
-# Serasa Consumidor - Teste para QA
- 
-O objetivo deste teste é verificar suas habilidades de resolução de um problema e avaliar suas escolhas. Para isso você receberá um problema simples onde poderá mostrar suas técnicas.
- 
-Nós encorajamos você a exagerar um pouco na solução para mostrar do que você é capaz.
- 
-Considere um cenário em que você esteja construindo uma solução, onde outros QA’s precisarão trabalhar e manter essa solução ao longo do tempo. 
- 
-Na entrevista de "revisão", esteja preparado para responder algumas perguntas sobre a solução adotada.
-Como e por que você as escolheu e com quais outras alternativas você está familiarizado, serão algumas dessas perguntas.
- 
-## Problema:
- 
-Você possui um marketplace de produtos financeiros. A disponibilização desses produtos ocorre por meio de integrações com várias instituições financeiras através de microservices.
-Esses microservices acessam uma base de dados previamente cadastradas pelas instituições financeiras.
-Para que um produto seja exibido no seu marketplace você precisa ao menos que um dos parceiros te envie os dados para realizar cadastro prévio em dois locais distintos.
-Em algum momento esses dados não são disponibilizados pelas instituições financeiras, impossibilitando que esse produto seja exibido no seu marketplace.
- 
-Considerando o problema descrito acima, qual solução você daria para que a dependência dos dados enviados pelas instituições financeiras não fosse um problema?
+# Desafio QA
 
-Qual arquitetura de testes você implantaria de forma que poderia ser integrada ao SDLC?
-Obs: Considere que o framework utilizado para o SDLC é o scrum.
+## Objetivo do Desafio
+A proposta deste Desafio é analisar as suas habilidades em conceber cenários de testes, programação e boas práticas necessárias para automatização dos testes.
+Vamos considerar e avaliar todas etapas, então faça com calma e não tenha medo de errar ! Caso tenha dúvidas referentes ao Desafio, sinta-se a vontade para entrar em contato com nosso time de QA's.
+Você terá liberdade para escolher a linguagem de programação e ferramentas utilizadas na automatização dos testes.
+Atenção para as **Dicas** de cada etapa, não são obrigatórias mas podem somar mais pontos no desafio.
+A terceira parte do Desafio não é obrigatória mas também soma mais pontos no desafio.
 
-Que técnicas de testes e qualidade poderiam ser aplicadas nesse cenário para que a qualidade de novas features de seu marketplace não fossem afetadas?
+
+
+## O Desafio
+
+### 1. Escolher a plataforma & escrita de cenários
+
+Nós da Serasa estamos nos mais diversos canais digitais.
+Nesta primeira parte do desafio, você deverá:
+* escolher a plataforma de sua preferência, seja ela **Web(https://www.serasa.com.br/), Android/iOS**.
+* escrever ao menos 5 cenários de teste em **BDD**.
+* explicar e detalhar o porquê escolheu esses cenários. 
+
+
+Dica: **Escolher mais de uma plataforma renderá mais pontos para sua nota**
+Dica: **Escrever mais cenários de teste renderá mais pontos para sua nota**
+
+
+### 2. Automação de testes de interface de usuário
+
+Nesta etapa, você precisa criar uma suite de testes automatizada para pelo menos 3 dos cenários que foram escritos na primeira parte deste desafio, em suas respectivas plataformas.
+* explicar e detalhar as decisões que você tomou (exemplo: o porquê escolheu determinada linguagem de programação, framework etc). 
+* Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
+
+Dica: **Fazer testes automatizados em plataformas diferentes (Web, Android ou iOS) renderá mais pontos para sua nota**
+
+
+### 3. Testes de API **(Extra)**
+
+Esta última etapa do Desafio não é obrigatória, mas rende pontos extras.
+Você deve criar uma suite de testes (automatizada ou não) com a API de filmes: https://www.themoviedb.org/
+* Tente focar em cenários críticos, focando em testes de contrato.
+* explicar e detalhar as decisões que você tomou (exemplo: o porquê escolheu determinada linguagem de programação, framework etc). 
+* Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
+
+Dica: **Fazer testes automatizados renderá mais pontos para sua nota**
+
+
+### 4. Processo de Submissão e Prazo de entrega
+
+Para o processo de submissão, você deverá seguir os passos abaixo:
+1. Você deverá fazer um fork deste repositório (não clonar!)
+2. Desenvolva todo seu projeto neste fork
+3. Todos commits e alterações deverá ser feita em seu fork
+4. Quando tiver tudo pronto, envie um Pull Request para este repositório.
+
+**Você tem 5 dias para concluir e enviar o Desafio.**
+
+
+### 5. Considerações Finais
+
+Para realiazação dos testes, você pode escolher a linguagem de programação, framework, etc. que você se sentir mais confortável.
+Não se esqueça de prover informações detalhadas de como instalar e rodar as suítes de teste.
+Vamos considerar e avaliar todas etapas, não tenha medo de errar !
+Caso tenha alguma dúvida com o desafio, pode procurar nossos QA's :
+
+Bruno Exterckotter - https://www.linkedin.com/in/brunoexterckotter/
+
+Robson Hamilton - https://www.linkedin.com/in/robson-hamilton-193462187/
+
+Willian Pires - https://www.linkedin.com/in/willian-pires-nunes-128b8552/
