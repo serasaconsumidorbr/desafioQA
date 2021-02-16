@@ -2,16 +2,16 @@
 
 **Tecnologias utilizadas**
 
-**Maven, Java, Selelnium, Appium, Cucumber, JUnit, Appium, Allure e RestAssured.**
+**Maven, Java, Selenium, Appium, Cucumber, JUnit, Appium, Allure e RestAssured.**
 
->Selenium-IDE é uma ferramenta de testes funcionais  Web que utiliza o JavaScript Functional Test Runner, que é um framework que executa na página a ser testada, a fim de automatizar essa tarefa.
+>Selenium-IDE é uma ferramenta de testes funcionais Web que utiliza o JavaScript Functional Test Runner, um framework que executa na página a ser testada, a fim de automatizar essa tarefa.
 
 >Appium é uma ferramenta open-source utilizada para automação de testes funcionais mobile em plataforma IOS e Android.
 
 >Maven para gerenciar dependências do projeto e executar testes
 >RestAssured para testar as requisições REST
 
->JUnit para os testes unitários, verificar classes e métodos
+>JUnit é utilizado executar para os testes unitários, verificar classes e métodos
 
 >gson ou org.json para conversão de objetos java em representação JSON
 
@@ -27,16 +27,17 @@
 + Postman
 + Android Studio
 
-- Instalar o Maven, seja manualmente ou via homebrew com o comando: brew Install maven
+- Instalar o Maven, seja manualmente ou via homebrew com o comando: 
+`brew Install maven`
 - Trocar a JRE System Library para JavaSE-1.8 para evitar erros nas dependências do pom.xml
 - Injetar as dependências no pom.xml
 - Ter o Java 8 e o Maven instalado com as variáveis de ambiente configuradas 
 
 *O terminal ficará mais ou menos assim:*
 
+``` js
 alias ls='ls -Gh'
 
-``` js
 export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
 export ANDROID_HOME=~/Library/Android/sdk
 export M2_HOME=/usr/local/Cellar/maven/3.6.3
