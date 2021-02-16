@@ -1,0 +1,8 @@
+{
+  "platformName": "iOS",
+  "platformVersion": "YOUR VERSION HERE",
+  "deviceName": "YOUR DEVICE NAME HERE",
+  "automationName": "XCUITest",
+  "newCommandTimeout": 5,
+  "connectHardwareKeyboard": true
+}
