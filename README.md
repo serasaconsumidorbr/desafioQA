@@ -1,65 +1,138 @@
-# Desafio QA
+# Desafio QA Serasa
 
-## Objetivo do Desafio
-A proposta deste Desafio é analisar as suas habilidades em conceber cenários de testes, programação e boas práticas necessárias para automatização dos testes.
-Vamos considerar e avaliar todas etapas, então faça com calma e não tenha medo de errar ! Caso tenha dúvidas referentes ao Desafio, sinta-se a vontade para entrar em contato com nosso time de QA's.
-Você terá liberdade para escolher a linguagem de programação e ferramentas utilizadas na automatização dos testes.
-Atenção para as **Dicas** de cada etapa, não são obrigatórias mas podem somar mais pontos no desafio.
-A terceira parte do Desafio não é obrigatória mas também soma mais pontos no desafio.
+**Tecnologias utilizadas**
+
+**Maven, Java, Selelnium, Appium, Cucumber, JUnit, Appium, Allure e RestAssured.**
+
+>Selenium-IDE é uma ferramenta de testes funcionais  Web que utiliza o JavaScript Functional Test Runner, que é um framework que executa na página a ser testada, a fim de automatizar essa tarefa.
+
+>Appium é uma ferramenta open-source utilizada para automação de testes funcionais mobile em plataforma IOS e Android.
+
+>Maven para gerenciar dependências do projeto e executar testes
+>RestAssured para testar as requisições REST
+
+>JUnit para os testes unitários, verificar classes e métodos
+
+>gson ou org.json para conversão de objetos java em representação JSON
+
+>Cucumber para descrever o valor do negócio em uma linguagem natural
+
+>Allure para gerar status report dos testes executados
+
+**IDES utilizadas**
++ Eclipse IDE
++ IntelliJ IDEA CE
+
+**Demais ferramentas**
++ Postman
++ Android Studio
+
+- Instalar o Maven, seja manualmente ou via homebrew com o comando: brew Install maven
+- Trocar a JRE System Library para JavaSE-1.8 para evitar erros nas dependências do pom.xml
+- Injetar as dependências no pom.xml
+- Ter o Java 8 e o Maven instalado com as variáveis de ambiente configuradas 
+
+*O terminal ficará mais ou menos assim:*
+
+alias ls='ls -Gh'
+
+``` js
+export JAVA_HOME=$(/usr/libexec/java_home -v1.8)
+export ANDROID_HOME=~/Library/Android/sdk
+export M2_HOME=/usr/local/Cellar/maven/3.6.3
+export M2=$2_HOME/bin
+export PATH=$M2:$PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+PATH=$PATH:$ANDROID_HOME/platform-tools
+PATH=$PATH:$ANDROID_HOME/tools
+PATH=$PATH:$ANDROID_HOME/tools/bin
+PATH=$PATH:$ANDROID_HOME/tools/lib
+
+export PATH 
+```
+
+___ 
+--- 
+*** 
 
 
+## Testes de API REST
 
-## O Desafio
+- Remover a tag <scope>test</scope> do JUnit no pom.xml assim ele usará a Scope compile por padrão
+- Executar os testes com “Run As > JUnit Test”
 
-### 1. Escolher a plataforma & escrita de cenários
+**Rotina dos testes na API**
+- Autenticar com API Key e gerar um request_token
+- Teste de contrato do filme “Mad Max”
+- Validar o login com o novo request_token
+- Autenticar a sessão com o request token gerando um session_id
+- Finalizar a sessão utilizando o session_id
 
-Nós da Serasa estamos nos mais diversos canais digitais.
-Nesta primeira parte do desafio, você deverá:
-* escolher a plataforma de sua preferência, seja ela **Web(https://www.serasa.com.br/), Android/iOS**.
-* escrever ao menos 5 cenários de teste em **BDD**.
-* explicar e detalhar o porquê escolheu esses cenários. 
+___ 
+--- 
+*** 
 
+## Automação Front-End Web
 
-Dica: **Escolher mais de uma plataforma renderá mais pontos para sua nota**
-Dica: **Escrever mais cenários de teste renderá mais pontos para sua nota**
+- Necessário já ter uma IDE com plugin do Cucumber, **os drivers no framework precisam estar compatíveis com os navegadores que serão utilizados durante os testes**.
+- **Colocar as credenciais de login nas variáveis em:** `src/test/resources/config.properties`
+- Executar os testes com:
+`mvn clean -Dbrowser=DRIVE_MAC -Dcucumber.options="--tags @FeatureTag” -Denv.ENVIROMENMENT=ENVIRONMENT test`
 
+Exemplo:
+`mvn clean -Dbrowser=CHROME_MAC -Dcucumber.options="--tags @FeatureLogin" -Denv.ENVIROMENMENT=PRD test`
 
-### 2. Automação de testes de interface de usuário
+___ 
+--- 
+*** 
 
-Nesta etapa, você precisa criar uma suite de testes automatizada para pelo menos 3 dos cenários que foram escritos na primeira parte deste desafio, em suas respectivas plataformas.
-* explicar e detalhar as decisões que você tomou (exemplo: o porquê escolheu determinada linguagem de programação, framework etc). 
-* Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
+## Automação Android Front-End Mobile
 
-Dica: **Fazer testes automatizados em plataformas diferentes (Web, Android ou iOS) renderá mais pontos para sua nota**
+- Ter instalado o Android Studio
+- Configurar um dispositivo virtual e escolher a versão de sistema do mesmo no AVD Manager/SDK Platforms(ou utilizar um device físico se preferir)
+- Configurar as Capabilities do dispositivo
+- Utilizar o comando `adb devices`para ve o udid dos devices conectados
+- Instalar as ferramentas (SDK Tools)
 
+**Inserir as credenciais de Login nas variáveis validCPF e validPassword em:** `src/test/java/screen/LoginScreen`
 
-### 3. Testes de API **(Extra)**
+- Executar os testes com: 
+`mvn clean test -Dcucumber.options="--tags @FeatureTag” -Ddev.DEVICE=DEVICE -Denv.ENVIROMENMENT=ENVIRONMENT`
 
-Esta última etapa do Desafio não é obrigatória, mas rende pontos extras.
-Você deve criar uma suite de testes (automatizada ou não) com a API de filmes: https://www.themoviedb.org/
-* Tente focar em cenários críticos, focando em testes de contrato.
-* explicar e detalhar as decisões que você tomou (exemplo: o porquê escolheu determinada linguagem de programação, framework etc). 
-* Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
+Exemplo:
+`mvn clean test -Dcucumber.options="--tags @smoketest" -Ddev.DEVICE=ANDROID -Denv.ENVIRONMENT=PRD`
 
-Dica: **Fazer testes automatizados renderá mais pontos para sua nota**
+___ 
+--- 
+*** 
 
+## Allure Report
 
-### 4. Processo de Submissão e Prazo de entrega
+- Executar o comando após rodar a suite de testes:
+  `mvn allure:serve`
 
-Para o processo de submissão, você deverá seguir os passos abaixo:
-1. Você deverá fazer um fork deste repositório (não clonar!)
-2. Desenvolva todo seu projeto neste fork
-3. Todos commits e alterações deverá ser feita em seu fork
-4. Quando tiver tudo pronto, envie um Pull Request para este repositório.
+___ 
+--- 
+*** 
 
-**Você tem 5 dias para concluir e enviar o Desafio.**
+### Referencias:
 
+- [Maven Dependency Scopes](https://howtodoinjava.com/maven/maven-dependency-scopes/)
 
-### 5. Considerações Finais
+- [Instale o Homebrew](https://brew.sh/index_pt-br)
 
-Para realiazação dos testes, você pode escolher a linguagem de programação, framework, etc. que você se sentir mais confortável.
-Não se esqueça de prover informações detalhadas de como instalar e rodar as suítes de teste.
-Vamos considerar e avaliar todas etapas, não tenha medo de errar !
-Caso tenha alguma dúvida com o desafio, pode procurar nossos QA's através do email:
+- [The Movie Database API](https://developers.themoviedb.org/4/getting-started/authorization)
 
-ecs_tribo_qa@br.experian.com
+- [Getting started - Appium](https://appium.io/docs/en/about-appium/getting-started/)
+
+- [Appium server arguments](http://appium.io/docs/en/writing-running-appium/server-args/)
+
+- [Cucumber Reference](https://cucumber.io/docs/cucumber/api/)
+
+- [Markdown-it Github.io](https://markdown-it.github.io/)
+
+- [How to preserve insertion order in Hashmap](https://stackoverflow.com/questions/10710193/how-to-preserve-insertion-order-in-hashmap)
+
+- [Hashmap put(), is it always ordering?](https://stackoverflow.com/questions/36026761/hashmap-put-is-it-always-ordering/36027011#:~:text=HashMap%20has%20no%20inherent%20ordering,9)
+
