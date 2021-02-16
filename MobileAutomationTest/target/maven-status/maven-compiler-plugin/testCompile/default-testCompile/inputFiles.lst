@@ -1,0 +1,15 @@
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/screens/services/ServicesScreen.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/stepDefinition/HomeSteps.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/utils/AppiumManager.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/capabilities/LoadCapabilities.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/stepDefinition/Hooks.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/capabilities/IOSDevicesCapabilities.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/stepDefinition/ServicesSteps.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/runner/RunnerTest.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/screens/home/HomeScreen.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/screens/login/LoginScreen.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/stepDefinition/LoginSteps.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/capabilities/AndroidDevicesCapabilities.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/screens/onboarding/OnboardingScreen.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/utils/BaseScreen.java
+/Users/tiagomartins/eclipse-workspace/MobileAutomationTest/src/test/java/stepDefinition/OnboardingSteps.java
