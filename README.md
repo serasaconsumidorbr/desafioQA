@@ -4,20 +4,20 @@
 
 **Maven, Java, Selelnium, Appium, Cucumber, JUnit, Appium, Allure e RestAssured.**
 
->`Selenium-IDE é uma ferramenta de testes funcionais  Web que utiliza o JavaScript Functional Test Runner, que é um framework que executa na página a ser testada, a fim de automatizar essa tarefa.`
+>Selenium-IDE é uma ferramenta de testes funcionais  Web que utiliza o JavaScript Functional Test Runner, que é um framework que executa na página a ser testada, a fim de automatizar essa tarefa.
 
->`Appium é uma ferramenta open-source utilizada para automação de testes funcionais mobile em plataforma IOS e Android.`
+>Appium é uma ferramenta open-source utilizada para automação de testes funcionais mobile em plataforma IOS e Android.
 
->`Maven para gerenciar dependências do projeto e executar testes`
->`RestAssured para testar as requisições REST`
+>Maven para gerenciar dependências do projeto e executar testes
+>RestAssured para testar as requisições REST
 
->`JUnit para os testes unitários, verificar classes e métodos`
+>JUnit para os testes unitários, verificar classes e métodos
 
->`gson ou org.json para conversão de objetos java em representação JSON`
+>gson ou org.json para conversão de objetos java em representação JSON
 
->`Cucumber para descrever o valor do negócio em uma linguagem natural`
+>Cucumber para descrever o valor do negócio em uma linguagem natural
 
->`Allure para gerar status report dos testes executados`
+>Allure para gerar status report dos testes executados
 
 **IDES utilizadas**
 + Eclipse IDE
@@ -134,5 +134,5 @@ ___
 
 - [How to preserve insertion order in Hashmap](https://stackoverflow.com/questions/10710193/how-to-preserve-insertion-order-in-hashmap)
 
-- [Hashmap put(), is it always ordering?](https://stackoverflow.com/questions/36026761/hashmap-put-is-it-always-ordering/36027011#:~:text=HashMap%20has%20no%20inherent%20ordering,9)%2C%20use%20a%20TreeMap.&text=Use%20TreeMap%20for%20Ascending%20order.)
+- [Hashmap put(), is it always ordering?](https://stackoverflow.com/questions/36026761/hashmap-put-is-it-always-ordering/36027011#:~:text=HashMap%20has%20no%20inherent%20ordering,9)
 
