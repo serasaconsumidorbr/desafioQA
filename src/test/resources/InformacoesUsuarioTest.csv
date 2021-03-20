@@ -1,0 +1,6 @@
+testTentativaCadastroDadosInvalidos,cpf,nomesobrenome,nascimento,email,senha,mensagem
+                                    ,40822876043,Serasis Serasils,05071990,testserasa10@gmail.com,07081992ser,Alguma informação parece estar incorreta. Verifique se você preencheu todos os campos corretamente.
+testValidaLogin,cpf,senha,msglogado
+               ,INSERIR CPF,INSERIR SENHA,INSERIR NOME COMPLETO DO USUARIO
+testHistorico, cpf,senha,msghistorico
+               ,INSERIR CPF,INSERIR SENHA,Histórico do seu Score
