@@ -1,65 +1,55 @@
 # Desafio QA
 
-## Objetivo do Desafio
-A proposta deste Desafio é analisar as suas habilidades em conceber cenários de testes, programação e boas práticas necessárias para automatização dos testes.
-Vamos considerar e avaliar todas etapas, então faça com calma e não tenha medo de errar ! Caso tenha dúvidas referentes ao Desafio, sinta-se a vontade para entrar em contato com nosso time de QA's.
-Você terá liberdade para escolher a linguagem de programação e ferramentas utilizadas na automatização dos testes.
-Atenção para as **Dicas** de cada etapa, não são obrigatórias mas podem somar mais pontos no desafio.
-A terceira parte do Desafio não é obrigatória mas também soma mais pontos no desafio.
+## Tecnologias usadas Automação Web:
+Maven, Java, Selenium Webdriver, Cucumber, JUnit, Allure.
+
+Foram desenvolvidos os Testes na linguagem Java em um projeto maven para gerenciar as suas dependências, 
+usando a ferramenta Selenium WebDrive para mapear os elementos e usar suas funcionalidades, para facilitar o desenvolvimento 
+é utilizado a metodologia BDD com o Cucumber, rodando os testes unitários através do JUnit e formando os status reports pelo Allure. 
+
+### Cenarios em BDD e automatizados:
+*Login
+*Consultar o CPF grátis
+*Entenda seu Serasa Score
+*Ver Histórico Score
+*Ver todas as faixas Score
+*Compromisso com crédito Score
 
 
+**Observações importantes:**
+Mudar variáveis na classe Utils 
 
-## O Desafio
-
-### 1. Escolher a plataforma & escrita de cenários
-
-Nós da Serasa estamos nos mais diversos canais digitais.
-Nesta primeira parte do desafio, você deverá:
-* escolher a plataforma de sua preferência, seja ela **Web(https://www.serasa.com.br/), Android/iOS**.
-* escrever ao menos 5 cenários de teste em **BDD**.
-* explicar e detalhar o porquê escolheu esses cenários. 
+*USUARIO = "$SEU_USUARIO"
+*SENHA = "$SUA_SENHA";
+*PATH do chromeDriver $SEU_CAMINHO
 
 
-Dica: **Escolher mais de uma plataforma renderá mais pontos para sua nota**
-Dica: **Escrever mais cenários de teste renderá mais pontos para sua nota**
+## Testes de API REST
+
+RestAssured e Schema.
+
+RestAssured para realizar os testes de contratos automatizados validando os json de Schemas das API's movie, tv e person.
+
+** Observações importantes:**
+Mudar variáveis na Interface Constantes 
+
+*Key para $SUA_KEY
 
 
-### 2. Automação de testes de interface de usuário
+###  IDE utilizada:
 
-Nesta etapa, você precisa criar uma suite de testes automatizada para pelo menos 3 dos cenários que foram escritos na primeira parte deste desafio, em suas respectivas plataformas.
-* explicar e detalhar as decisões que você tomou (exemplo: o porquê escolheu determinada linguagem de programação, framework etc). 
-* Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
-
-Dica: **Fazer testes automatizados em plataformas diferentes (Web, Android ou iOS) renderá mais pontos para sua nota**
+IntelliJ IDEA CE
 
 
-### 3. Testes de API **(Extra)**
+### Informações sobre as ferramentas.
 
-Esta última etapa do Desafio não é obrigatória, mas rende pontos extras.
-Você deve criar uma suite de testes (automatizada ou não) com a API de filmes: https://www.themoviedb.org/
-* Tente focar em cenários críticos, focando em testes de contrato.
-* explicar e detalhar as decisões que você tomou (exemplo: o porquê escolheu determinada linguagem de programação, framework etc). 
-* Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
+Usar JDK- 1.8
+Java e Maven instalados com variáveis ambientes devidamente configuradas
 
 Dica: **Fazer testes automatizados renderá mais pontos para sua nota**
 
 
-### 4. Processo de Submissão e Prazo de entrega
+### Execução:
+Allure: mvn allure:serve
+Testes automatizados: Para rodar selecione a feature desejada e de play
 
-Para o processo de submissão, você deverá seguir os passos abaixo:
-1. Você deverá fazer um fork deste repositório (não clonar!)
-2. Desenvolva todo seu projeto neste fork
-3. Todos commits e alterações deverá ser feita em seu fork
-4. Quando tiver tudo pronto, envie um Pull Request para este repositório.
-
-**Você tem 5 dias para concluir e enviar o Desafio.**
-
-
-### 5. Considerações Finais
-
-Para realiazação dos testes, você pode escolher a linguagem de programação, framework, etc. que você se sentir mais confortável.
-Não se esqueça de prover informações detalhadas de como instalar e rodar as suítes de teste.
-Vamos considerar e avaliar todas etapas, não tenha medo de errar !
-Caso tenha alguma dúvida com o desafio, pode procurar nossos QA's através do email:
-
-ecs_tribo_qa@br.experian.com
