@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "required": [
+    "adult",
+    "also_known_as",
+    "biography",
+    "birthday",
+    "deathday",
+    "gender",
+    "homepage",
+    "id",
+    "imdb_id",
+    "known_for_department",
+    "name",
+    "place_of_birth",
+    "popularity",
+    "profile_path"
+  ],
+  "properties": {
+    "adult": {
+      "$id": "#/properties/adult",
+      "type": "boolean"
+    },
+    "also_known_as": {
+      "$id": "#/properties/also_known_as",
+      "type": "array",
+      "items": {
+        "$id": "#/properties/also_known_as/items"
+      }
+    },
+    "biography": {
+      "$id": "#/properties/biography",
+      "type": "string"
+    },
+    "birthday": {
+      "$id": "#/properties/birthday",
+      "type": "null"
+    },
+    "deathday": {
+      "$id": "#/properties/deathday",
+      "type": "null"
+    },
+    "gender": {
+      "$id": "#/properties/gender",
+      "type": "integer"
+    },
+    "homepage": {
+      "$id": "#/properties/homepage",
+      "type": "null"
+    },
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer"
+    },
+    "imdb_id": {
+      "$id": "#/properties/imdb_id",
+      "type": "string"
+    },
+    "known_for_department": {
+      "$id": "#/properties/known_for_department",
+      "type": "string"
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string"
+    },
+    "place_of_birth": {
+      "$id": "#/properties/place_of_birth",
+      "type": "null"
+    },
+    "popularity": {
+      "$id": "#/properties/popularity",
+      "type": "number"
+    },
+    "profile_path": {
+      "$id": "#/properties/profile_path",
+      "type": "null"
+    }
+  }
+}

@@ -1,0 +1,988 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "required": [
+    "backdrop_path",
+    "created_by",
+    "episode_run_time",
+    "first_air_date",
+    "genres",
+    "homepage",
+    "id",
+    "in_production",
+    "languages",
+    "last_air_date",
+    "last_episode_to_air",
+    "name",
+    "next_episode_to_air",
+    "networks",
+    "number_of_episodes",
+    "number_of_seasons",
+    "origin_country",
+    "original_language",
+    "original_name",
+    "overview",
+    "popularity",
+    "poster_path",
+    "production_companies",
+    "production_countries",
+    "seasons",
+    "spoken_languages",
+    "status",
+    "tagline",
+    "type",
+    "vote_average",
+    "vote_count"
+  ],
+  "properties": {
+    "backdrop_path": {
+      "$id": "#/properties/backdrop_path",
+      "type": "string"
+    },
+    "created_by": {
+      "$id": "#/properties/created_by",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/created_by/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/created_by/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "id",
+              "credit_id",
+              "name",
+              "gender",
+              "profile_path"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/created_by/items/anyOf/0/properties/id",
+                "type": "integer"
+              },
+              "credit_id": {
+                "$id": "#/properties/created_by/items/anyOf/0/properties/credit_id",
+                "type": "string"
+              },
+              "name": {
+                "$id": "#/properties/created_by/items/anyOf/0/properties/name",
+                "type": "string"
+              },
+              "gender": {
+                "$id": "#/properties/created_by/items/anyOf/0/properties/gender",
+                "type": "integer"
+              },
+              "profile_path": {
+                "$id": "#/properties/created_by/items/anyOf/0/properties/profile_path",
+                "type": "null"
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "episode_run_time": {
+      "$id": "#/properties/episode_run_time",
+      "type": "array",
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/episode_run_time/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/episode_run_time/items/anyOf/0",
+            "type": "integer"
+          }
+        ]
+      }
+    },
+    "first_air_date": {
+      "$id": "#/properties/first_air_date",
+      "type": "string",
+      "title": "The first_air_date schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2021-01-15"
+      ]
+    },
+    "genres": {
+      "$id": "#/properties/genres",
+      "type": "array",
+      "title": "The genres schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "id": 10765,
+            "name": "Sci-Fi & Fantasy"
+          },
+          {
+            "id": 9648,
+            "name": "Mystery"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/genres/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/genres/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "id": 10765,
+                "name": "Sci-Fi & Fantasy"
+              }
+            ],
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/genres/items/anyOf/0/properties/id",
+                "type": "integer",
+                "title": "The id schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  10765
+                ]
+              },
+              "name": {
+                "$id": "#/properties/genres/items/anyOf/0/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Sci-Fi & Fantasy"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "homepage": {
+      "$id": "#/properties/homepage",
+      "type": "string",
+      "title": "The homepage schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "https://www.disneyplus.com/series/wandavision/4SrN28ZjDLwH"
+      ]
+    },
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        85271
+      ]
+    },
+    "in_production": {
+      "$id": "#/properties/in_production",
+      "type": "boolean",
+      "title": "The in_production schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "languages": {
+      "$id": "#/properties/languages",
+      "type": "array",
+      "title": "The languages schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          "en"
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/languages/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/languages/items/anyOf/0",
+            "type": "string",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "en"
+            ]
+          }
+        ]
+      }
+    },
+    "last_air_date": {
+      "$id": "#/properties/last_air_date",
+      "type": "string",
+      "title": "The last_air_date schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2021-03-05"
+      ]
+    },
+    "last_episode_to_air": {
+      "$id": "#/properties/last_episode_to_air",
+      "type": "object",
+      "title": "The last_episode_to_air schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "air_date": "2021-03-05",
+          "episode_number": 9,
+          "id": 2724621,
+          "name": "The Series Finale",
+          "overview": "The events of WandaVision come to a head, and the destinies of all who took part are determined.",
+          "production_code": "",
+          "season_number": 1,
+          "still_path": "/8OIqCs8UUiG1ifmrAcn29A7tL4T.jpg",
+          "vote_average": 7.5,
+          "vote_count": 13
+        }
+      ],
+      "required": [
+        "air_date",
+        "episode_number",
+        "id",
+        "name",
+        "overview",
+        "production_code",
+        "season_number",
+        "still_path",
+        "vote_average",
+        "vote_count"
+      ],
+      "properties": {
+        "air_date": {
+          "$id": "#/properties/last_episode_to_air/properties/air_date",
+          "type": "string",
+          "title": "The air_date schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "2021-03-05"
+          ]
+        },
+        "episode_number": {
+          "$id": "#/properties/last_episode_to_air/properties/episode_number",
+          "type": "integer",
+          "title": "The episode_number schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            9
+          ]
+        },
+        "id": {
+          "$id": "#/properties/last_episode_to_air/properties/id",
+          "type": "integer",
+          "title": "The id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            2724621
+          ]
+        },
+        "name": {
+          "$id": "#/properties/last_episode_to_air/properties/name",
+          "type": "string",
+          "title": "The name schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "The Series Finale"
+          ]
+        },
+        "overview": {
+          "$id": "#/properties/last_episode_to_air/properties/overview",
+          "type": "string",
+          "title": "The overview schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "The events of WandaVision come to a head, and the destinies of all who took part are determined."
+          ]
+        },
+        "production_code": {
+          "$id": "#/properties/last_episode_to_air/properties/production_code",
+          "type": "string",
+          "title": "The production_code schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "season_number": {
+          "$id": "#/properties/last_episode_to_air/properties/season_number",
+          "type": "integer",
+          "title": "The season_number schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "still_path": {
+          "$id": "#/properties/last_episode_to_air/properties/still_path",
+          "type": "string",
+          "title": "The still_path schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "/8OIqCs8UUiG1ifmrAcn29A7tL4T.jpg"
+          ]
+        },
+        "vote_average": {
+          "$id": "#/properties/last_episode_to_air/properties/vote_average",
+          "type": "number",
+          "title": "The vote_average schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            7.5
+          ]
+        },
+        "vote_count": {
+          "$id": "#/properties/last_episode_to_air/properties/vote_count",
+          "type": "integer",
+          "title": "The vote_count schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            13
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The name schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "WandaVision"
+      ]
+    },
+    "next_episode_to_air": {
+      "$id": "#/properties/next_episode_to_air",
+      "type": "null",
+      "title": "The next_episode_to_air schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "networks": {
+      "$id": "#/properties/networks",
+      "type": "array",
+      "title": "The networks schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "name": "Disney+",
+            "id": 2739,
+            "logo_path": "/gJ8VX6JSu3ciXHuC2dDGAo2lvwM.png",
+            "origin_country": "US"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/networks/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/networks/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "Disney+",
+                "id": 2739,
+                "logo_path": "/gJ8VX6JSu3ciXHuC2dDGAo2lvwM.png",
+                "origin_country": "US"
+              }
+            ],
+            "required": [
+              "name",
+              "id",
+              "logo_path",
+              "origin_country"
+            ],
+            "properties": {
+              "name": {
+                "$id": "#/properties/networks/items/anyOf/0/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Disney+"
+                ]
+              },
+              "id": {
+                "$id": "#/properties/networks/items/anyOf/0/properties/id",
+                "type": "integer",
+                "title": "The id schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  2739
+                ]
+              },
+              "logo_path": {
+                "$id": "#/properties/networks/items/anyOf/0/properties/logo_path",
+                "type": "string",
+                "title": "The logo_path schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "/gJ8VX6JSu3ciXHuC2dDGAo2lvwM.png"
+                ]
+              },
+              "origin_country": {
+                "$id": "#/properties/networks/items/anyOf/0/properties/origin_country",
+                "type": "string",
+                "title": "The origin_country schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "US"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "number_of_episodes": {
+      "$id": "#/properties/number_of_episodes",
+      "type": "integer",
+      "title": "The number_of_episodes schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        9
+      ]
+    },
+    "number_of_seasons": {
+      "$id": "#/properties/number_of_seasons",
+      "type": "integer",
+      "title": "The number_of_seasons schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        1
+      ]
+    },
+    "origin_country": {
+      "$id": "#/properties/origin_country",
+      "type": "array",
+      "title": "The origin_country schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          "US"
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/origin_country/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/origin_country/items/anyOf/0",
+            "type": "string",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "US"
+            ]
+          }
+        ]
+      }
+    },
+    "original_language": {
+      "$id": "#/properties/original_language",
+      "type": "string",
+      "title": "The original_language schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "en"
+      ]
+    },
+    "original_name": {
+      "$id": "#/properties/original_name",
+      "type": "string",
+      "title": "The original_name schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "WandaVision"
+      ]
+    },
+    "overview": {
+      "$id": "#/properties/overview",
+      "type": "string",
+      "title": "The overview schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Wanda Maximoff and Vision—two super-powered beings living idealized suburban lives—begin to suspect that everything is not as it seems."
+      ]
+    },
+    "popularity": {
+      "$id": "#/properties/popularity",
+      "type": "number",
+      "title": "The popularity schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0.0,
+      "examples": [
+        609.255
+      ]
+    },
+    "poster_path": {
+      "$id": "#/properties/poster_path",
+      "type": "string",
+      "title": "The poster_path schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "/glKDfE6btIRcVB5zrjspRIs4r52.jpg"
+      ]
+    },
+    "production_companies": {
+      "$id": "#/properties/production_companies",
+      "type": "array",
+      "title": "The production_companies schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "id": 420,
+            "logo_path": "/hUzeosd33nzE5MCNsZxCGEKTXaQ.png",
+            "name": "Marvel Studios",
+            "origin_country": "US"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/production_companies/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/production_companies/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "id": 420,
+                "logo_path": "/hUzeosd33nzE5MCNsZxCGEKTXaQ.png",
+                "name": "Marvel Studios",
+                "origin_country": "US"
+              }
+            ],
+            "required": [
+              "id",
+              "logo_path",
+              "name",
+              "origin_country"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/production_companies/items/anyOf/0/properties/id",
+                "type": "integer",
+                "title": "The id schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  420
+                ]
+              },
+              "logo_path": {
+                "$id": "#/properties/production_companies/items/anyOf/0/properties/logo_path",
+                "type": "string",
+                "title": "The logo_path schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "/hUzeosd33nzE5MCNsZxCGEKTXaQ.png"
+                ]
+              },
+              "name": {
+                "$id": "#/properties/production_companies/items/anyOf/0/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Marvel Studios"
+                ]
+              },
+              "origin_country": {
+                "$id": "#/properties/production_companies/items/anyOf/0/properties/origin_country",
+                "type": "string",
+                "title": "The origin_country schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "US"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "production_countries": {
+      "$id": "#/properties/production_countries",
+      "type": "array",
+      "title": "The production_countries schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/production_countries/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/production_countries/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "iso_3166_1": "US",
+                "name": "United States of America"
+              }
+            ],
+            "required": [
+              "iso_3166_1",
+              "name"
+            ],
+            "properties": {
+              "iso_3166_1": {
+                "$id": "#/properties/production_countries/items/anyOf/0/properties/iso_3166_1",
+                "type": "string",
+                "title": "The iso_3166_1 schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "US"
+                ]
+              },
+              "name": {
+                "$id": "#/properties/production_countries/items/anyOf/0/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "United States of America"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "seasons": {
+      "$id": "#/properties/seasons",
+      "type": "array",
+      "title": "The seasons schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "air_date": "2021-01-15",
+            "episode_count": 9,
+            "id": 114993,
+            "name": "Season 1",
+            "overview": "",
+            "poster_path": "/2RBNHQxWwTDBTmShhdanYvbuS6x.jpg",
+            "season_number": 1
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/seasons/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/seasons/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "air_date": "2021-01-15",
+                "episode_count": 9,
+                "id": 114993,
+                "name": "Season 1",
+                "overview": "",
+                "poster_path": "/2RBNHQxWwTDBTmShhdanYvbuS6x.jpg",
+                "season_number": 1
+              }
+            ],
+            "required": [
+              "air_date",
+              "episode_count",
+              "id",
+              "name",
+              "overview",
+              "poster_path",
+              "season_number"
+            ],
+            "properties": {
+              "air_date": {
+                "$id": "#/properties/seasons/items/anyOf/0/properties/air_date",
+                "type": "string",
+                "title": "The air_date schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "2021-01-15"
+                ]
+              },
+              "episode_count": {
+                "$id": "#/properties/seasons/items/anyOf/0/properties/episode_count",
+                "type": "integer",
+                "title": "The episode_count schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  9
+                ]
+              },
+              "id": {
+                "$id": "#/properties/seasons/items/anyOf/0/properties/id",
+                "type": "integer",
+                "title": "The id schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  114993
+                ]
+              },
+              "name": {
+                "$id": "#/properties/seasons/items/anyOf/0/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Season 1"
+                ]
+              },
+              "overview": {
+                "$id": "#/properties/seasons/items/anyOf/0/properties/overview",
+                "type": "string",
+                "title": "The overview schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  ""
+                ]
+              },
+              "poster_path": {
+                "$id": "#/properties/seasons/items/anyOf/0/properties/poster_path",
+                "type": "string",
+                "title": "The poster_path schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "/2RBNHQxWwTDBTmShhdanYvbuS6x.jpg"
+                ]
+              },
+              "season_number": {
+                "$id": "#/properties/seasons/items/anyOf/0/properties/season_number",
+                "type": "integer",
+                "title": "The season_number schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "spoken_languages": {
+      "$id": "#/properties/spoken_languages",
+      "type": "array",
+      "title": "The spoken_languages schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/spoken_languages/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/spoken_languages/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "english_name": "English",
+                "iso_639_1": "en",
+                "name": "English"
+              }
+            ],
+            "required": [
+              "english_name",
+              "iso_639_1",
+              "name"
+            ],
+            "properties": {
+              "english_name": {
+                "$id": "#/properties/spoken_languages/items/anyOf/0/properties/english_name",
+                "type": "string",
+                "title": "The english_name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "English"
+                ]
+              },
+              "iso_639_1": {
+                "$id": "#/properties/spoken_languages/items/anyOf/0/properties/iso_639_1",
+                "type": "string",
+                "title": "The iso_639_1 schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "en"
+                ]
+              },
+              "name": {
+                "$id": "#/properties/spoken_languages/items/anyOf/0/properties/name",
+                "type": "string",
+                "title": "The name schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "English"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "status": {
+      "$id": "#/properties/status",
+      "type": "string",
+      "title": "The status schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Ended"
+      ]
+    },
+    "tagline": {
+      "$id": "#/properties/tagline",
+      "type": "string",
+      "title": "The tagline schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Experience a new vision of reality."
+      ]
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "The type schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Miniseries"
+      ]
+    },
+    "vote_average": {
+      "$id": "#/properties/vote_average",
+      "type": "number",
+      "title": "The vote_average schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0.0,
+      "examples": [
+        8.4
+      ]
+    },
+    "vote_count": {
+      "$id": "#/properties/vote_count",
+      "type": "integer",
+      "title": "The vote_count schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        8105
+      ]
+    }
+  },
+  "additionalProperties": true
+}
