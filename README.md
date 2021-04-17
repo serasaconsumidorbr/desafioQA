@@ -37,7 +37,7 @@ RestAssured para realizar os testes de contratos automatizados validando os json
 
 Mudar variáveis na Interface Constantes 
 
-*Key para $SUA_KEY
+* Key para $SUA_KEY
 
 
 ###  IDE utilizada:
