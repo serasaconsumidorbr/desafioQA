@@ -8,20 +8,23 @@ usando a ferramenta Selenium WebDrive para mapear os elementos e usar suas funci
 é utilizado a metodologia BDD com o Cucumber, rodando os testes unitários através do JUnit e formando os status reports pelo Allure. 
 
 ### Cenarios em BDD e automatizados:
-*Login
-*Consultar o CPF grátis
-*Entenda seu Serasa Score
-*Ver Histórico Score
-*Ver todas as faixas Score
-*Compromisso com crédito Score
+* Login
+* Consultar o CPF grátis
+* Entenda seu Serasa Score
+* Ver Histórico Score
+* Ver todas as faixas Score
+* Compromisso com crédito Score
 
 
 **Observações importantes:**
+
 Mudar variáveis na classe Utils 
 
-*USUARIO = "$SEU_USUARIO"
-*SENHA = "$SUA_SENHA";
-*PATH do chromeDriver $SEU_CAMINHO
+* USUARIO = "$SEU_USUARIO"
+
+* SENHA = "$SUA_SENHA";
+
+* PATH do chromeDriver $SEU_CAMINHO
 
 
 ## Testes de API REST
@@ -30,7 +33,8 @@ RestAssured e Schema.
 
 RestAssured para realizar os testes de contratos automatizados validando os json de Schemas das API's movie, tv e person.
 
-** Observações importantes:**
+**Observações importantes:**
+
 Mudar variáveis na Interface Constantes 
 
 *Key para $SUA_KEY
@@ -45,8 +49,6 @@ IntelliJ IDEA CE
 
 Usar JDK- 1.8
 Java e Maven instalados com variáveis ambientes devidamente configuradas
-
-Dica: **Fazer testes automatizados renderá mais pontos para sua nota**
 
 
 ### Execução:
