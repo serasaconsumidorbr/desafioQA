@@ -1,0 +1,211 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "required": [
+    "adult",
+    "backdrop_path",
+    "belongs_to_collection",
+    "budget",
+    "genres",
+    "homepage",
+    "id",
+    "imdb_id",
+    "original_language",
+    "original_title",
+    "overview",
+    "popularity",
+    "poster_path",
+    "production_companies",
+    "production_countries",
+    "release_date",
+    "revenue",
+    "runtime",
+    "spoken_languages",
+    "status",
+    "tagline",
+    "title",
+    "video",
+    "vote_average",
+    "vote_count"
+  ],
+  "properties": {
+    "adult": {
+      "$id": "#/properties/adult",
+      "type": "boolean"
+    },
+    "backdrop_path": {
+      "$id": "#/properties/backdrop_path",
+      "type": "null"
+    },
+    "belongs_to_collection": {
+      "$id": "#/properties/belongs_to_collection",
+      "type": "null"
+    },
+    "budget": {
+      "$id": "#/properties/budget",
+      "type": "integer"
+    },
+    "genres": {
+      "$id": "#/properties/genres",
+      "type": "array",
+      "items": {
+        "$id": "#/properties/genres/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/genres/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/properties/genres/items/anyOf/0/properties/id",
+                "type": "integer"
+              },
+              "name": {
+                "$id": "#/properties/genres/items/anyOf/0/properties/name",
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "homepage": {
+      "$id": "#/properties/homepage",
+      "type": "string"
+    },
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer"
+    },
+    "imdb_id": {
+      "$id": "#/properties/imdb_id",
+      "type": "string"
+    },
+    "original_language": {
+      "$id": "#/properties/original_language",
+      "type": "string"
+    },
+    "original_title": {
+      "$id": "#/properties/original_title",
+      "type": "string"
+    },
+    "overview": {
+      "$id": "#/properties/overview",
+      "type": "string"
+    },
+    "popularity": {
+      "$id": "#/properties/popularity",
+      "type": "number"
+    },
+    "poster_path": {
+      "$id": "#/properties/poster_path",
+      "type": "string"
+    },
+    "production_companies": {
+      "$id": "#/properties/production_companies",
+      "type": "array",
+      "items": {
+        "$id": "#/properties/production_companies/items"
+      }
+    },
+    "production_countries": {
+      "$id": "#/properties/production_countries",
+      "type": "array",
+      "items": {
+        "$id": "#/properties/production_countries/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/production_countries/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "iso_3166_1",
+              "name"
+            ],
+            "properties": {
+              "iso_3166_1": {
+                "$id": "#/properties/production_countries/items/anyOf/0/properties/iso_3166_1",
+                "type": "string"
+              },
+              "name": {
+                "$id": "#/properties/production_countries/items/anyOf/0/properties/name",
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "release_date": {
+      "$id": "#/properties/release_date",
+      "type": "string"
+    },
+    "revenue": {
+      "$id": "#/properties/revenue",
+      "type": "integer"
+    },
+    "runtime": {
+      "$id": "#/properties/runtime",
+      "type": "integer"
+    },
+    "spoken_languages": {
+      "$id": "#/properties/spoken_languages",
+      "type": "array",
+      "items": {
+        "$id": "#/properties/spoken_languages/items",
+        "anyOf": [
+          {
+            "$id": "#/properties/spoken_languages/items/anyOf/0",
+            "type": "object",
+            "required": [
+              "english_name",
+              "iso_639_1",
+              "name"
+            ],
+            "properties": {
+              "english_name": {
+                "$id": "#/properties/spoken_languages/items/anyOf/0/properties/english_name",
+                "type": "string"
+              },
+              "iso_639_1": {
+                "$id": "#/properties/spoken_languages/items/anyOf/0/properties/iso_639_1",
+                "type": "string"
+              },
+              "name": {
+                "$id": "#/properties/spoken_languages/items/anyOf/0/properties/name",
+                "type": "string"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "status": {
+      "$id": "#/properties/status",
+      "type": "string"
+    },
+    "tagline": {
+      "$id": "#/properties/tagline",
+      "type": "string"
+    },
+    "title": {
+      "$id": "#/properties/title",
+      "type": "string"
+    },
+    "video": {
+      "$id": "#/properties/video",
+      "type": "boolean"
+    },
+    "vote_average": {
+      "$id": "#/properties/vote_average",
+      "type": "number"
+    },
+    "vote_count": {
+      "$id": "#/properties/vote_count",
+      "type": "integer"
+    }
+  }
+}
