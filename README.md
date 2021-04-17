@@ -53,5 +53,6 @@ Java e Maven instalados com variáveis ambientes devidamente configuradas
 
 ### Execução:
 Allure: mvn allure:serve
+
 Testes automatizados: Para rodar selecione a feature desejada e de play
 
