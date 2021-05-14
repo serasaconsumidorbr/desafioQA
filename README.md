@@ -60,6 +60,3 @@ Para o processo de submissão, você deverá seguir os passos abaixo:
 Para realiazação dos testes, você pode escolher a linguagem de programação, framework, etc. que você se sentir mais confortável.
 Não se esqueça de prover informações detalhadas de como instalar e rodar as suítes de teste.
 Vamos considerar e avaliar todas etapas, não tenha medo de errar !
-Caso tenha alguma dúvida com o desafio, pode procurar nossos QA's através do email:
-
-ecs_tribo_qa@br.experian.com
