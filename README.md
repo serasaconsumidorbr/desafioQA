@@ -15,7 +15,7 @@ A terceira parte do Desafio não é obrigatória mas também soma mais pontos no
 
 Nós da Serasa estamos nos mais diversos canais digitais.
 Nesta primeira parte do desafio, você deverá:
-* escolher a plataforma de sua preferência, seja ela **Web(https://www.serasa.com.br/), Android/iOS**.
+* escolher a plataforma de sua preferência, seja ela **Web(https://www.serasa.com.br/), Android/iOS**.: Web e Android
 * escrever ao menos 5 cenários de teste em **BDD**.
 * explicar e detalhar o porquê escolheu esses cenários. 
 
@@ -23,6 +23,10 @@ Nesta primeira parte do desafio, você deverá:
 Dica: **Escolher mais de uma plataforma renderá mais pontos para sua nota**
 Dica: **Escrever mais cenários de teste renderá mais pontos para sua nota**
 
+Cenários escritos em: Desafio QA\cypress\integration\cenarios.feature e Desafio QA\cypress\integration\cenarios_mobile.feature
+
+O cenário que mais gostaria de automatizar era o de cálculo do Score, porém, por não ter acesso a mais dados de como o cálculo é realizado e também não ter acesso à um banco de dados de teste, acabei focando em logar, navegar pelas páginas e cadastrar.
+Durante os testes comecei a enfrentar um erro com a mensagem  "Ops, ocorreu um erro no sistema. Por favor, tente novamente em alguns minutos." após informar o número do CPF.
 
 ### 2. Automação de testes de interface de usuário
 
@@ -31,6 +35,9 @@ Nesta etapa, você precisa criar uma suite de testes automatizada para pelo meno
 * Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
 
 Dica: **Fazer testes automatizados em plataformas diferentes (Web, Android ou iOS) renderá mais pontos para sua nota**
+
+
+Automação realizada com Cypress, pois me pareceu de fácil implementação, levando em consideração que não atuo com automação no momento, e me pareceu ter uma curva de aprendizagem menor. Ia implementar também integração com Cucumber, para fazer o link com os cenários em BDD e a automação, mas devido ao tempo escasso e problemas com os testes, decidi manter os testes simples.
 
 
 ### 3. Testes de API **(Extra)**
