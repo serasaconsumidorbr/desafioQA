@@ -1,0 +1,219 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome9",
+    "definitions": {
+        "Welcome9": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "adult": {
+                    "type": "boolean"
+                },
+                "backdrop_path": {
+                    "type": "string"
+                },
+                "belongs_to_collection": {
+                    "type": "null"
+                },
+                "budget": {
+                    "type": "integer"
+                },
+                "genres": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Genre"
+                    }
+                },
+                "homepage": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "http"
+                    ]
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "imdb_id": {
+                    "type": "string"
+                },
+                "original_language": {
+                    "type": "string"
+                },
+                "original_title": {
+                    "type": "string"
+                },
+                "overview": {
+                    "type": "string"
+                },
+                "popularity": {
+                    "type": "number"
+                },
+                "poster_path": {
+                    "type": "string"
+                },
+                "production_companies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ProductionCompany"
+                    }
+                },
+                "production_countries": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ProductionCountry"
+                    }
+                },
+                "release_date": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "revenue": {
+                    "type": "integer"
+                },
+                "runtime": {
+                    "type": "integer"
+                },
+                "spoken_languages": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/SpokenLanguage"
+                    }
+                },
+                "status": {
+                    "type": "string"
+                },
+                "tagline": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "video": {
+                    "type": "boolean"
+                },
+                "vote_average": {
+                    "type": "number"
+                },
+                "vote_count": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "adult",
+                "backdrop_path",
+                "belongs_to_collection",
+                "budget",
+                "genres",
+                "homepage",
+                "id",
+                "imdb_id",
+                "original_language",
+                "original_title",
+                "overview",
+                "popularity",
+                "poster_path",
+                "production_companies",
+                "production_countries",
+                "release_date",
+                "revenue",
+                "runtime",
+                "spoken_languages",
+                "status",
+                "tagline",
+                "title",
+                "video",
+                "vote_average",
+                "vote_count"
+            ],
+            "title": "Welcome9"
+        },
+        "Genre": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ],
+            "title": "Genre"
+        },
+        "ProductionCompany": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "logo_path": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "name": {
+                    "type": "string"
+                },
+                "origin_country": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "logo_path",
+                "name",
+                "origin_country"
+            ],
+            "title": "ProductionCompany"
+        },
+        "ProductionCountry": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "iso_3166_1": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "iso_3166_1",
+                "name"
+            ],
+            "title": "ProductionCountry"
+        },
+        "SpokenLanguage": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "english_name": {
+                    "type": "string"
+                },
+                "iso_639_1": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "english_name",
+                "iso_639_1",
+                "name"
+            ],
+            "title": "SpokenLanguage"
+        }
+    }
+}

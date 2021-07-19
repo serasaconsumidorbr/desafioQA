@@ -1,0 +1,14 @@
+/target/
+
+# Mac
+.DS_Store
+
+# Eclipse
+.metadata
+.classpath
+.project
+.settings/
+bin/
+test-output/
+tmp/
+.loadpath

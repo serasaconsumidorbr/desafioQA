@@ -1,0 +1,116 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome9",
+    "definitions": {
+        "Welcome9": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "page": {
+                    "type": "integer"
+                },
+                "results": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Result"
+                    }
+                },
+                "total_pages": {
+                    "type": "integer"
+                },
+                "total_results": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "page",
+                "results",
+                "total_pages",
+                "total_results"
+            ],
+            "title": "Welcome9"
+        },
+        "Result": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "adult": {
+                    "type": "boolean"
+                },
+                "backdrop_path": {
+                    "anyOf": [
+                        {
+                            "type": "null"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "genre_ids": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "original_language": {
+                    "$ref": "#/definitions/OriginalLanguage"
+                },
+                "original_title": {
+                    "type": "string"
+                },
+                "overview": {
+                    "type": "string"
+                },
+                "popularity": {
+                    "type": "number"
+                },
+                "poster_path": {
+                    "type": "string"
+                },
+                "release_date": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "video": {
+                    "type": "boolean"
+                },
+                "vote_average": {
+                    "type": "number"
+                },
+                "vote_count": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "adult",
+                "backdrop_path",
+                "genre_ids",
+                "id",
+                "original_language",
+                "original_title",
+                "overview",
+                "popularity",
+                "poster_path",
+                "title",
+                "video",
+                "vote_average",
+                "vote_count"
+            ],
+            "title": "Result"
+        },
+        "OriginalLanguage": {
+            "type": "string",
+            "enum": [
+                "en"
+            ],
+            "title": "OriginalLanguage"
+        }
+    }
+}
