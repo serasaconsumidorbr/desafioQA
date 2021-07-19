@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" >
+	<test name="API Tests">
+		<classes>
+   			<class name="br.com.serasaexperian.api.tests.MovieTest" />
+		</classes>
+	</test>
+</suite>

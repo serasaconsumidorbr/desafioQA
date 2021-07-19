@@ -1,0 +1,10 @@
+#BASE URI
+BASE_URI: https://api.themoviedb.org/3
+
+# AUTHENTICATION
+GUEST_SESSION: /authentication/guest_session/new
+
+# MOVIE
+LIST_ALL_POPULAR_MOVIES: /movie/popular
+MOVIE_BY_ID:             /movie/{movie_id}
+RATING_BY_ID:            /movie/{movie_id}/rating

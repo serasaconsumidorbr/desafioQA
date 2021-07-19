@@ -1,62 +1,157 @@
-# Desafio QA
+# Mobile Automation (Android) / API
+---
 
-## Objetivo do Desafio
-A proposta deste Desafio é analisar as suas habilidades em conceber cenários de testes, programação e boas práticas necessárias para automatização dos testes.
-Vamos considerar e avaliar todas etapas, então faça com calma e não tenha medo de errar ! Caso tenha dúvidas referentes ao Desafio, sinta-se a vontade para entrar em contato com nosso time de QA's.
-Você terá liberdade para escolher a linguagem de programação e ferramentas utilizadas na automatização dos testes.
-Atenção para as **Dicas** de cada etapa, não são obrigatórias mas podem somar mais pontos no desafio.
-A terceira parte do Desafio não é obrigatória mas também soma mais pontos no desafio.
+_Serasa_  app E2E testing and _Themoviedb_  API testing
 
 
+## Mobile (Android) testing approach:
 
-## O Desafio
+In order to write all these tests is necessary to follow some steps, such as:
 
-### 1. Escolher a plataforma & escrita de cenários
+- Get the APK file to install in devices and/or emulators.
+- Focused on scenarios regarding sign-up feature and checked some error messages that is shown according to the given input.
+- Choose  _Appium_  because it allows to write the same scenario for both platform such as Android e iOS.
 
-Nós da Serasa estamos nos mais diversos canais digitais.
-Nesta primeira parte do desafio, você deverá:
-* escolher a plataforma de sua preferência, seja ela **Web(https://www.serasa.com.br/), Android/iOS**.
-* escrever ao menos 5 cenários de teste em **BDD**.
-* explicar e detalhar o porquê escolheu esses cenários. 
-
-
-Dica: **Escolher mais de uma plataforma renderá mais pontos para sua nota**
-Dica: **Escrever mais cenários de teste renderá mais pontos para sua nota**
+_Note:_  If it were given a development APK for testing, it would be able to write more scenarios for all account area after login step.
 
 
-### 2. Automação de testes de interface de usuário
+## API testing approach
 
-Nesta etapa, você precisa criar uma suite de testes automatizada para pelo menos 3 dos cenários que foram escritos na primeira parte deste desafio, em suas respectivas plataformas.
-* explicar e detalhar as decisões que você tomou (exemplo: o porquê escolheu determinada linguagem de programação, framework etc). 
-* Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
+I choose rest-assured framework for this test, because it allows to make requests in a simple way using BDD approach  and validates the schema for contract tests. Moreover, it provides to make all types of authentications easily.
 
-Dica: **Fazer testes automatizados em plataformas diferentes (Web, Android ou iOS) renderá mais pontos para sua nota**
+_Important:_  Please, in the file `src/test/java/br/com/serasaexperian/apis/Credentials.java`, must be input your *BEAR* and *API_KEY* credentials before running.
 
+Change these credentials:
 
-### 3. Testes de API **(Extra)**
-
-Esta última etapa do Desafio não é obrigatória, mas rende pontos extras.
-Você deve criar uma suite de testes (automatizada ou não) com a API de filmes: https://www.themoviedb.org/
-* Tente focar em cenários críticos, focando em testes de contrato.
-* explicar e detalhar as decisões que você tomou (exemplo: o porquê escolheu determinada linguagem de programação, framework etc). 
-* Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
-
-Dica: **Fazer testes automatizados renderá mais pontos para sua nota**
+	BEAR("<<YOUR_BEAR>>"), 
+	API_KEY("<<YOUR_API_KEYS>>");
 
 
-### 4. Processo de Submissão e Prazo de entrega
+## Project Structurer
 
-Para o processo de submissão, você deverá seguir os passos abaixo:
-1. Você deverá fazer um fork deste repositório (não clonar!)
-2. Desenvolva todo seu projeto neste fork
-3. Todos commits e alterações deverá ser feita em seu fork
-4. Quando tiver tudo pronto, envie um Pull Request para este repositório.
-
-**Você tem 5 dias para concluir e enviar o Desafio.**
+This project has some tests which covers mobile and API platforms, so it is organized by packages. However, in a real scenario would be better to create different projects for each platform.
 
 
-### 5. Considerações Finais
+## Pre-requisites:
 
-Para realiazação dos testes, você pode escolher a linguagem de programação, framework, etc. que você se sentir mais confortável.
-Não se esqueça de prover informações detalhadas de como instalar e rodar as suítes de teste.
-Vamos considerar e avaliar todas etapas, não tenha medo de errar !
+- NodeJS
+- Java 8
+- Appium
+- Appium Doctor
+- Maven
+- Android SDK
+
+
+### Install Appium
+
+```
+npm install -g appium
+```
+
+### Install Android SDK
+
+Visit the page: [Android download](https://developer.android.com/studio#command-tools)
+
+
+### Set up the environment variables:
+
+Open `.bash_profile`
+
+```
+vim ~/.bash_profile
+```
+
+Add the following lines inside the opened file:
+
+```
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$PATH:$JAVA_HOME
+export PATH=$PATH:$JAVA_HOME/bin
+export ANDROID_HOME=/Users/.../Library/Android/sdk
+export ANDROID_SDK=$ANDROID_HOME
+PATH=$PATH:$ANDROID_HOME/build-tools
+PATH=$PATH:$ANDROID_HOME/tools
+PATH=$PATH:$ANDROID_HOME/platform-tools
+PATH=$PATH:$ANDROID_HOME/emulator/emulator
+PATH=$PATH:$ANDROID_HOME/lib/
+PATH=$PATH:$ANDROID_HOME/tools/lib
+export PATH
+```
+
+Save and run `source` to apply the changes to your current session
+
+```
+source ~/.bash_profile
+```
+
+
+### Verifying the Installation
+
+Install Appium doctor
+
+```
+npm install -g appium-doctor
+```
+
+
+Run in terminal:
+
+```
+appium-doctor --android
+```
+
+The output should contain something like this:
+
+```
+info AppiumDoctor Appium Doctor v.1.15.3
+info AppiumDoctor ### Diagnostic for necessary dependencies starting ###
+info AppiumDoctor  ✔ The Node.js binary was found at: /usr/local/bin/node
+info AppiumDoctor  ✔ Node version is 12.18.4
+info AppiumDoctor  ✔ ANDROID_HOME is set to: /Users/.../Library/Android/sdk
+info AppiumDoctor  ✔ JAVA_HOME is set to: /Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home
+info AppiumDoctor    Checking adb, android, emulator
+info AppiumDoctor      'adb' is in /Users/.../Library/Android/sdk/platform-tools/adb
+info AppiumDoctor      'android' is in /Users/.../Library/Android/sdk/tools/android
+info AppiumDoctor      'emulator' is in /Users/.../Library/Android/sdk/emulator/emulator
+info AppiumDoctor  ✔ adb, android, emulator exist: /Users/.../Library/Android/sdk
+info AppiumDoctor  ✔ Bin directory of $JAVA_HOME is set
+```
+
+
+### Starting android device
+
+- Connect a real device via USB or launch an android emulator.
+
+*Note: For real devices, you have to ensure that Developer mode is turned on for the device.*
+
+To make sure that this device is ready. Run in terminal the following command:
+
+```
+adb devices
+```
+
+The output should display all devices:
+
+```
+List of devices attached
+emulator-5554	   device
+```
+
+
+### Starting the Appium server
+
+Run in terminal:
+
+```
+appium
+```
+
+
+### Running all tests  _(Mobile and API tests)_
+
+
+```
+mvn clean test -Dcucumber.options="--tags @regression" -Dplatform="android" -Ddevice="emulator-5554" -DsuiteXmlFile=suite-tests/suite.xml
+```
+
+
