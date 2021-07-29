@@ -1,0 +1,12 @@
+pages\BasePage.class
+webDriver\WebDriver.class
+pages\LoginPage.class
+pages\HomePage.class
+stepDefinition\ConsultaCPFGratisValido.class
+stepDefinition\Hooks.class
+runner\RunnerTest.class
+utils\Dados.class
+stepDefinition\Login.class
+pages\MeuCPFPage.class
+stepDefinition\MeuCPF.class
+pages\ConsultaCPFGratisPage.class
