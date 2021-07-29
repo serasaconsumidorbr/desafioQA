@@ -1,0 +1,9 @@
+pages\BasePage.class
+mobileDriver\AndroidAppiumDriver.class
+pages\LoginPage.class
+stepDefinition\Login.class
+pages\MeuCPFPage.class
+stepDefinition\Hooks.class
+stepDefinition\MeuCPF.class
+runner\RunnerTest.class
+utils\DadosDeAcesso.class
