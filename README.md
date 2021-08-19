@@ -2,7 +2,7 @@
 
 **Tecnologias utilizadas**
 
-**Maven, Java, Selenium, Appium, Cucumber, JUnit, Appium, Allure e RestAssured.**
+**Maven, Java, Selenium, Appium, Cucumber, JUnit, Allure e RestAssured.**
 
 >Selenium-IDE é uma ferramenta de testes funcionais Web que utiliza o JavaScript Functional Test Runner, um framework que executa na página a ser testada, a fim de automatizar essa tarefa.
 
