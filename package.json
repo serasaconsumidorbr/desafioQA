@@ -1,0 +1,25 @@
+{
+  "name": "desafioqa",
+  "version": "1.0.0",
+  "description": "A proposta deste Desafio é analisar as suas habilidades em conceber cenários de testes, programação e boas práticas necessárias para automatização dos testes.\r Vamos considerar e avaliar todas etapas, então faça com calma e não tenha medo de errar ! Caso tenha dúvidas referentes ao Desafio, sinta-se a vontade para entrar em contato com nosso time de QA's.\r Você terá liberdade para escolher a linguagem de programação e ferramentas utilizadas na automatização dos testes.\r Atenção para as **Dicas** de cada etapa, não são obrigatórias mas podem somar mais pontos no desafio.\r A terceira parte do Desafio não é obrigatória mas também soma mais pontos no desafio.",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^8.3.0",
+    "faker-br": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardolnovaes/desafioQA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonardolnovaes/desafioQA/issues"
+  },
+  "homepage": "https://github.com/leonardolnovaes/desafioQA#readme"
+}

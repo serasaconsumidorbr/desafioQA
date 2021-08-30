@@ -1,0 +1,8 @@
+{
+    "baseUrl": "https://www.serasa.com.br",
+    "viewportWidth": 1347,
+    "viewportHeight": 724,
+    "env": {
+        "apiKeyMovies": "b9a902381de7dd3ea4f7471445d6dc69"
+    }
+}
