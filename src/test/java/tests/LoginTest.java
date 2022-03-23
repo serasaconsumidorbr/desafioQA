@@ -7,8 +7,21 @@ public class LoginTest extends LoginPage {
 
 
     @Test
-    public void clicarBotaoSignIn() {
+    public void realizarLogin() {
         clicarSignIn();
+        digitarLogin("k@k");
+        digitarPassword("123");
+        clicarSignInForm();
+        validarLogin();
+    }
+
+    @Test
+    public void realizarLoginInvalido(){
+        clicarSignIn();
+        digitarLogin("");
+        digitarPassword("123");
+        clicarSignInForm();
+        validarToastLoginInvalido();
     }
 
 }
