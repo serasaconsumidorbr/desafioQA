@@ -29,15 +29,15 @@ public class LoginPage extends Driver {
     }
 
     public void validarLogin(){
-        String esperado = "Now you are registered and can add tasks that you want to do in a far away future.";
-        String recebido = navegador.findElement(By.xpath("//p[contains(.,'Now you are registered and can add tasks that you want to do in a far away future.')]")).getText();
-        Assert.assertEquals(esperado,recebido);
+        String esperada = "Now you are registered and can add tasks that you want to do in a far away future.";
+        String recebida = navegador.findElement(By.xpath("//p[contains(.,'Now you are registered and can add tasks that you want to do in a far away future.')]")).getText();
+        Assert.assertEquals(esperada,recebida);
     }
 
     public void validarToastLoginInvalido(){
-        String esperado = "Maybe you brain dropped the password or login in some place!";
-        String recebido = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Maybe you brain dropped the password or login in some place!')]")).getText();
-        Assert.assertEquals(esperado,recebido);
+        String esperada = "Maybe you brain dropped the password or login in some place!";
+        String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Maybe you brain dropped the password or login in some place!')]")).getText();
+        Assert.assertEquals(esperada,recebida);
 
     }
 }

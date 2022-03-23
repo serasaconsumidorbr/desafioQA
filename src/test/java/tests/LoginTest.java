@@ -7,7 +7,7 @@ public class LoginTest extends LoginPage {
 
 
     @Test
-    public void realizarLogin() {
+    public void realizarLoginValido() {
         clicarSignIn();
         digitarLogin("k@k");
         digitarPassword("123");
