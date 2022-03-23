@@ -1,12 +1,12 @@
 package tests;
 
 import org.junit.Test;
-import pages.RegistrationPage;
+import pages.SignUpPage;
 
-public class RegistrationTest extends RegistrationPage {
+public class SignUpTest extends SignUpPage {
 
     @Test
-    public void realizarCadastro(){
+    public void realizarInscricao(){
         clicarSignUp();
         digitarName();
         digitarLogin("m1@m");
@@ -16,7 +16,7 @@ public class RegistrationTest extends RegistrationPage {
     }
 
     @Test
-    public void realizarCadastroComMesmoLogin(){
+    public void realizarInscricaoComMesmoLogin(){
         clicarSignUp();
         digitarName();
         digitarLogin("m1@m");

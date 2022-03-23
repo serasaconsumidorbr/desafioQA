@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import suport.Driver;
 
-public class RegistrationPage extends LoginPage {
+public class SignUpPage extends LoginPage {
 
     public void clicarSignUp(){
         navegador.findElement(By.cssSelector("#signup")).click();
