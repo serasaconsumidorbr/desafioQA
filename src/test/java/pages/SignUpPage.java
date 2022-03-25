@@ -2,8 +2,6 @@ package pages;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import suport.Driver;
 
 public class SignUpPage extends LoginPage {
 
@@ -11,8 +9,8 @@ public class SignUpPage extends LoginPage {
         navegador.findElement(By.cssSelector("#signup")).click();
     }
 
-    public void digitarName(){
-        navegador.findElement(By.name("name")).sendKeys("maria");
+    public void digitarName(String name){
+        navegador.findElement(By.name("name")).sendKeys(name);
     }
 
     public void digitarLogin(String login){

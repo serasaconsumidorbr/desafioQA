@@ -15,13 +15,12 @@ public class LoginPage extends Driver {
         navegador.findElement(By.linkText("Sign in")).click();
     }
 
-    WebElement formularioSignInBox = navegador.findElement(By.id("signinbox"));
 
     public void digitarLogin(String login) {
-        formularioSignInBox.findElement(By.name("login")).sendKeys(login);
+        navegador.findElement(By.xpath("(//input[@name='login'])[2]")).sendKeys(login);
     }
     public void digitarPassword(String senha) {
-        formularioSignInBox.findElement(By.name("password")).sendKeys(senha);
+        navegador.findElement(By.xpath("(//input[@name='password'])[2]")).sendKeys(senha);
     }
 
     public void clicarSignInForm() {

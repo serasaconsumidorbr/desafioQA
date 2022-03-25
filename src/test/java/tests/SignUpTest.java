@@ -8,7 +8,7 @@ public class SignUpTest extends SignUpPage {
     @Test
     public void realizarInscricao(){
         clicarSignUp();
-        digitarName();
+        digitarName("maria");
         digitarLogin("m1@m");
         digitarPassword("123");
         clicarEmSave();
@@ -18,7 +18,7 @@ public class SignUpTest extends SignUpPage {
     @Test
     public void realizarInscricaoComMesmoLogin(){
         clicarSignUp();
-        digitarName();
+        digitarName("maria");
         digitarLogin("m1@m");
         digitarPassword("123");
         clicarEmSave();
