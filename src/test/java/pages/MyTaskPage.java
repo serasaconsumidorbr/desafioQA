@@ -4,11 +4,11 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import tests.LoginTest;
 
 import static org.junit.Assert.assertEquals;
 
-public class MyTaskPage extends LoginTest {
+public class MyTaskPage extends BasePage {
+
 
     public void clicarMyTasks() {
         navegador.findElement(By.xpath("(//a[contains(.,'My tasks')])[1]")).click();
@@ -54,7 +54,7 @@ public class MyTaskPage extends LoginTest {
     }
 
     public void deletarTaks() {
-        navegador.findElement(By.xpath("(//i[contains(.,'delete')])[2]")).click();
+        navegador.findElement(By.xpath("//i[contains(.,'delete')]")).click();
         Alert alert = navegador.switchTo().alert();
         alert.accept();
     }

@@ -7,6 +7,7 @@ public class LogoutTest extends LogoutPage {
 
     @Test
     public void realizarLogout(){
+        login();
         clicarLogout();
         validarLogout();
         gerarScreenshot();

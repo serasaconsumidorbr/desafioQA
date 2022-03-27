@@ -4,11 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import tests.LoginTest;
 
 import static org.junit.Assert.assertEquals;
 
-public class MePage extends LoginTest {
+public class MePage extends BasePage {
 
     public void clicarMePage() {
         WebElement mePage = (new WebDriverWait(navegador, 10))
@@ -25,9 +24,7 @@ public class MePage extends LoginTest {
 
     public void validarEdicaoDoNameValido(String name) {
         String esperada = "Now you will be called " + name + "!";
-        System.out.println(esperada);
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Now you will be called " + name + "!')]")).getText();
-        System.out.println(recebida);
         assertEquals(esperada, recebida);
     }
 
@@ -102,5 +99,6 @@ public class MePage extends LoginTest {
 
     }
 
-//
+
+
 }

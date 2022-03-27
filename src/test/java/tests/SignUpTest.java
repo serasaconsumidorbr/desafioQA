@@ -10,7 +10,7 @@ public class SignUpTest extends SignUpPage {
         clicarSignUp();
         digitarName("maria");
         digitarLoginNovo();
-        digitarPassword("123");
+        digitarPasswordNovo("123");
         clicarEmSave();
         validarLogin();
         gerarScreenshot();

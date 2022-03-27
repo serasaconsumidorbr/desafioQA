@@ -10,7 +10,7 @@ public class MeTest extends MePage {
     @Test
     //Aba ABOUT YOU
     public void alterarNameComDadosValidos() {
-        realizarLoginValido();
+        login();
         clicarMePage();
         editarName("ana");
         validarEdicaoDoNameValido("ana");
@@ -21,7 +21,7 @@ public class MeTest extends MePage {
     @Test
     //Aba ABOUT YOU
     public void alterarNameComDadosInvalidos() {
-        realizarLoginValido();
+        login();
         clicarMePage();
         editarName("");
         validarEdicaoDoNameInvalido();
@@ -32,7 +32,7 @@ public class MeTest extends MePage {
     @Test
     //Aba SECRET, SHHHH!
     public void editarSenhaComDadosValidos() {
-        realizarLoginValido();
+        login();
         clicarMePage();
         clicarSecret();
         digitarPasswordPageMe("123");
@@ -45,7 +45,7 @@ public class MeTest extends MePage {
     @Test
     //Aba SECRET, SHHHH!
     public void editarSenhaComDadosInvalidos() {
-        realizarLoginValido();
+        login();
         clicarMePage();
         clicarSecret();
         digitarPasswordPageMe("");
@@ -58,7 +58,7 @@ public class MeTest extends MePage {
     @Test
     //Aba MORE DATA ABOUT YOU
     public void adicionarEmailValido() {
-        realizarLoginValido();
+        login();
         clicarMePage();
         clicarMoreDataAboutYou();
         clicarAddMoreData();
@@ -72,7 +72,7 @@ public class MeTest extends MePage {
     @Test
     //Aba MORE DATA ABOUT YOU
     public void adicionarEmailInvalido() {
-        realizarLoginValido();
+        login();
         clicarMePage();
         clicarMoreDataAboutYou();
         clicarAddMoreData();
@@ -86,7 +86,7 @@ public class MeTest extends MePage {
     @Test
     //Aba MORE DATA ABOUT YOU
     public void adicionarPhoneValido() {
-        realizarLoginValido();
+        login();
         clicarMePage();
         clicarMoreDataAboutYou();
         clicarAddMoreData();
@@ -101,7 +101,7 @@ public class MeTest extends MePage {
     @Test
     //Aba MORE DATA ABOUT YOU
     public void adicionarPhoneInvalido() {
-        realizarLoginValido();
+        login();
         clicarMePage();
         clicarMoreDataAboutYou();
         clicarAddMoreData();

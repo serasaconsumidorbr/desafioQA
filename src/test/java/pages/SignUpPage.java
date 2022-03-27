@@ -2,11 +2,9 @@ package pages;
 
 import org.openqa.selenium.By;
 
-import java.util.Random;
-
 import static org.junit.Assert.assertEquals;
 
-public class SignUpPage extends LoginPage {
+public class SignUpPage extends BasePage {
 
     public void clicarSignUp(){
         navegador.findElement(By.cssSelector("#signup")).click();

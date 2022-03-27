@@ -1,23 +1,13 @@
 package tests;
 
 import org.junit.Test;
-import pages.LoginPage;
+import pages.BasePage;
 
-public class LoginTest extends LoginPage {
+public class LoginTest extends BasePage {
 
 
     @Test
     public void realizarLoginValido() {
-        clicarSignIn();
-        digitarLogin("k@k");
-        digitarPassword("123");
-        clicarSignInForm();
-        validarLogin();
-
-    }
-
-    @Test
-    public void realizarLoginValidoComScreenshot() {
         clicarSignIn();
         digitarLogin("k@k");
         digitarPassword("123");

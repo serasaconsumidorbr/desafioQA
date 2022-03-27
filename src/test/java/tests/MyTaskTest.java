@@ -7,7 +7,7 @@ public class MyTaskTest extends MyTaskPage {
 
     @Test
     public void adicionarTask(){
-        realizarLoginValido();
+        login();
         clicarMyTasks();
         clicarAddATask();
         adicionarTituloDaTask("Karol Task");
@@ -24,7 +24,7 @@ public class MyTaskTest extends MyTaskPage {
 
     @Test
     public void deletarTask(){
-        realizarLoginValido();
+        login();
         clicarMyTasks();
         clicarAddATask();
         adicionarTituloDaTask("Karol Task");
