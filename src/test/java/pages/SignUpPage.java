@@ -1,7 +1,8 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
+
+import static org.junit.Assert.assertEquals;
 
 public class SignUpPage extends LoginPage {
 
@@ -28,6 +29,6 @@ public class SignUpPage extends LoginPage {
     public void validarCadastroDuplicado(){
         String esperada = "Someone choose this login before, please pick another!";
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Someone choose this login before, please pick another!')]")).getText();
-        Assert.assertEquals(esperada, recebida);
+        assertEquals(esperada, recebida);
     }
 }

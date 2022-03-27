@@ -1,9 +1,10 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import suport.Driver;
+
+import static org.junit.Assert.*;
 
 public class LoginPage extends Driver {
 
@@ -29,13 +30,13 @@ public class LoginPage extends Driver {
     public void validarLogin(){
         String esperada = "Now you are registered and can add tasks that you want to do in a far away future.";
         String recebida = navegador.findElement(By.xpath("//p[contains(.,'Now you are registered and can add tasks that you want to do in a far away future.')]")).getText();
-        Assert.assertEquals(esperada,recebida);
+        assertEquals(esperada,recebida);
     }
 
     public void validarToastLoginInvalido(){
         String esperada = "Maybe you brain dropped the password or login in some place!";
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Maybe you brain dropped the password or login in some place!')]")).getText();
-        Assert.assertEquals(esperada,recebida);
+        assertEquals(esperada,recebida);
 
     }
 }

@@ -1,8 +1,9 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import tests.LoginTest;
+
+import static org.junit.Assert.assertEquals;
 
 public class MePage extends LoginTest {
 
@@ -21,13 +22,13 @@ public class MePage extends LoginTest {
         System.out.println(esperada);
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Now you will be called " + name + "!')]")).getText();
         System.out.println(recebida);
-        Assert.assertEquals(esperada, recebida);
+        assertEquals(esperada, recebida);
     }
 
     public void validarEdicaoDoNameInvalido() {
         String esperada = "Ask to change your name and do not tell it, does not make sense!";
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Ask to change your name and do not tell it, does not make sense!')]")).getText();
-        Assert.assertEquals(esperada, recebida);
+        assertEquals(esperada, recebida);
     }
 
     public void clicarSecret() {
@@ -65,33 +66,33 @@ public class MePage extends LoginTest {
     public void validarAlteracaoDePasswordValido() {
         String esperada = "You have a new secret, please do not share it!";
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'You have a new secret, please do not share it!')]")).getText();
-        Assert.assertEquals(esperada, recebida);
+        assertEquals(esperada, recebida);
     }
 
     public void validarAlteracaoDePasswordInvalido() {
         String esperada = "Do not be afraid, we will not share your secret!";
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Do not be afraid, we will not share your secret!')]")).getText();
-        Assert.assertEquals(esperada, recebida);
+        assertEquals(esperada, recebida);
     }
 
     public void validarAdicaoDeEmail() {
         String esperada = "Your contact has been added!";
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Your contact has been added!')]")).getText();
-        Assert.assertEquals(esperada, recebida);
+        assertEquals(esperada, recebida);
 
     }
 
     public void validarAdicaoDePhone() {
         String esperada = "Your contact has been added!";
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Your contact has been added!')]")).getText();
-        Assert.assertEquals(esperada, recebida);
+        assertEquals(esperada, recebida);
 
     }
 
     public void validarContactInvalido() {
         String esperada = "I think that you forget to tell me something!";
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'I think that you forget to tell me something!')]")).getText();
-        Assert.assertEquals(esperada, recebida);
+        assertEquals(esperada, recebida);
 
     }
 

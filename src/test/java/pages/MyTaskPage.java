@@ -1,11 +1,12 @@
 package pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import tests.LoginTest;
+
+import static org.junit.Assert.assertEquals;
 
 public class MyTaskPage extends LoginTest {
 
@@ -49,7 +50,7 @@ public class MyTaskPage extends LoginTest {
     public void validarTaskAdicionada() {
         String esperada = "The task has been added, pretty simple!";
         String recebida = navegador.findElement(By.xpath("(//div[contains(.,'The task has been added, pretty simple!')])[2]")).getText();
-        Assert.assertEquals(esperada, recebida);
+        assertEquals(esperada, recebida);
     }
 
     public void deletarTaks() {
@@ -61,6 +62,6 @@ public class MyTaskPage extends LoginTest {
     public void validarTaskDeletada() {
         String esperada = "Finally, I no longer need to set eyes on you damn task!";
         String recebida = navegador.findElement(By.xpath("//div[@class='toast rounded'][contains(.,'Finally, I no longer need to set eyes on you damn task!')]")).getText();
-        Assert.assertEquals(esperada, recebida);
+        assertEquals(esperada, recebida);
     }
 }
