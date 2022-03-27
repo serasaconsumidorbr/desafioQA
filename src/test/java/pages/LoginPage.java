@@ -17,7 +17,7 @@ public class LoginPage extends Driver {
     public String gerarLogin(){
         String login = "m";
         String login2= "@m";
-        for(int i=0; i < 11; i++){
+        for(int i=0; i < 1; i++){
             int numero = new Random().nextInt(10);
             login = login + numero + login2;
         }
@@ -28,10 +28,14 @@ public class LoginPage extends Driver {
         navegador.findElement(By.linkText("Sign in")).click();
     }
 
-    public void digitarLogin() {
+    public void digitarLogin(String login) {
+        navegador.findElement(By.xpath("(//input[@name='login'])[2]")).sendKeys(login);
+    }
+    public void digitarLoginNovo() {
         String login = gerarLogin();
         navegador.findElement(By.xpath("(//input[@name='login'])[2]")).sendKeys(login);
     }
+
     public void digitarPassword(String senha) {
         navegador.findElement(By.xpath("(//input[@name='password'])[2]")).sendKeys(senha);
     }
@@ -54,7 +58,7 @@ public class LoginPage extends Driver {
     }
 
     public void gerarScreenshot() {
-        String screenshotArquivo = "src/test/java/report/" + Generator.dataHoraParaArquivo() + ".png";
+        String screenshotArquivo = "src/test/java/report/prints" + Generator.dataHoraParaArquivo() + ".png";
         Screenshot.tirarScreenshot(navegador, screenshotArquivo);
     }
 

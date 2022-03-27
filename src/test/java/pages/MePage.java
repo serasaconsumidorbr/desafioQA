@@ -1,6 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import tests.LoginTest;
 
 import static org.junit.Assert.assertEquals;
@@ -8,7 +11,10 @@ import static org.junit.Assert.assertEquals;
 public class MePage extends LoginTest {
 
     public void clicarMePage() {
-        navegador.findElement(By.className("me")).click();
+        WebElement mePage = (new WebDriverWait(navegador, 10))
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//a[@class='me'])[1]")));
+        mePage.click();
+        //navegador.findElement(By.xpath("(//a[@class='me'])[1]")).click();
     }
 
     public void editarName(String name) {

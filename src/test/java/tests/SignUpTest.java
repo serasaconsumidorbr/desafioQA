@@ -9,7 +9,7 @@ public class SignUpTest extends SignUpPage {
     public void realizarInscricao(){
         clicarSignUp();
         digitarName("maria");
-        digitarLogin();
+        digitarLoginNovo();
         digitarPassword("123");
         clicarEmSave();
         validarLogin();
