@@ -9,5 +9,7 @@ public class LogoutTest extends LogoutPage {
     public void realizarLogout(){
         clicarLogout();
         validarLogout();
+        gerarScreenshot();
+        fecharNavegador();
     }
 }

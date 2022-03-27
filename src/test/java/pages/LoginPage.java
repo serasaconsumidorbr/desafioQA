@@ -3,6 +3,10 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import suport.Driver;
+import suport.Generator;
+import suport.Screenshot;
+
+import java.util.Random;
 
 import static org.junit.Assert.*;
 
@@ -10,13 +14,22 @@ public class LoginPage extends Driver {
 
     public WebDriver navegador = creatChrome();
 
+    public String gerarLogin(){
+        String login = "m";
+        String login2= "@m";
+        for(int i=0; i < 11; i++){
+            int numero = new Random().nextInt(10);
+            login = login + numero + login2;
+        }
+        return login;
+    }
 
     public void clicarSignIn() {
         navegador.findElement(By.linkText("Sign in")).click();
     }
 
-
-    public void digitarLogin(String login) {
+    public void digitarLogin() {
+        String login = gerarLogin();
         navegador.findElement(By.xpath("(//input[@name='login'])[2]")).sendKeys(login);
     }
     public void digitarPassword(String senha) {
@@ -39,4 +52,14 @@ public class LoginPage extends Driver {
         assertEquals(esperada,recebida);
 
     }
+
+    public void gerarScreenshot() {
+        String screenshotArquivo = "src/test/java/report/" + Generator.dataHoraParaArquivo() + ".png";
+        Screenshot.tirarScreenshot(navegador, screenshotArquivo);
+    }
+
+    public void fecharNavegador() {
+        navegador.quit();
+    }
+
 }

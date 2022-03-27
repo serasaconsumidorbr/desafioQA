@@ -14,6 +14,8 @@ public class MeTest extends MePage {
         clicarMePage();
         editarName("ana");
         validarEdicaoDoNameValido("ana");
+        gerarScreenshot();
+        fecharNavegador();
     }
 
     @Test
@@ -23,6 +25,8 @@ public class MeTest extends MePage {
         clicarMePage();
         editarName("");
         validarEdicaoDoNameInvalido();
+        gerarScreenshot();
+        fecharNavegador();
     }
 
     @Test
@@ -34,6 +38,8 @@ public class MeTest extends MePage {
         digitarPasswordPageMe("123");
         clicarSaveMyNewPassword();
         validarAlteracaoDePasswordValido();
+        gerarScreenshot();
+        fecharNavegador();
     }
 
     @Test
@@ -45,6 +51,8 @@ public class MeTest extends MePage {
         digitarPasswordPageMe("");
         clicarSaveMyNewPassword();
         validarAlteracaoDePasswordInvalido();
+        gerarScreenshot();
+        fecharNavegador();
     }
 
     @Test
@@ -57,6 +65,8 @@ public class MeTest extends MePage {
         adicionarContact("a@a");
         clicarEmSave();
         validarAdicaoDeEmail();
+        gerarScreenshot();
+        fecharNavegador();
     }
 
     @Test
@@ -69,6 +79,8 @@ public class MeTest extends MePage {
         adicionarContact("");
         clicarEmSave();
         validarContactInvalido();
+        gerarScreenshot();
+        fecharNavegador();
     }
 
     @Test
@@ -82,6 +94,8 @@ public class MeTest extends MePage {
         adicionarContact("5199999999");
         clicarEmSave();
         validarAdicaoDePhone();
+        gerarScreenshot();
+        fecharNavegador();
     }
 
     @Test
@@ -95,6 +109,8 @@ public class MeTest extends MePage {
         adicionarContact("");
         clicarEmSave();
         validarContactInvalido();
+        gerarScreenshot();
+        fecharNavegador();
     }
 
 }

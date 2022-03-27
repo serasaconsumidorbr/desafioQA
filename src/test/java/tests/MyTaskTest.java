@@ -17,6 +17,8 @@ public class MyTaskTest extends MyTaskPage {
         selecionarEstadoDaTask();
         clicarEmSave();
         validarTaskAdicionada();
+        gerarScreenshot();
+        fecharNavegador();
 
     }
 
@@ -34,6 +36,8 @@ public class MyTaskTest extends MyTaskPage {
         validarTaskAdicionada();
         deletarTaks();
         validarTaskDeletada();
+        gerarScreenshot();
+        fecharNavegador();
 
     }
 

@@ -9,20 +9,24 @@ public class SignUpTest extends SignUpPage {
     public void realizarInscricao(){
         clicarSignUp();
         digitarName("maria");
-        digitarLogin("m1@m");
+        digitarLogin();
         digitarPassword("123");
         clicarEmSave();
         validarLogin();
+        gerarScreenshot();
+        fecharNavegador();
     }
 
     @Test
     public void realizarInscricaoComMesmoLogin(){
         clicarSignUp();
         digitarName("maria");
-        digitarLogin("m1@m");
+        digitarLoginJaExistente("k@k");
         digitarPassword("123");
         clicarEmSave();
         validarCadastroDuplicado();
+        gerarScreenshot();
+        fecharNavegador();
 
     }
 

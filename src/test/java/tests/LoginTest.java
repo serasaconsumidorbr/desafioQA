@@ -9,19 +9,23 @@ public class LoginTest extends LoginPage {
     @Test
     public void realizarLoginValido() {
         clicarSignIn();
-        digitarLogin("k@k");
+        digitarLogin();
         digitarPassword("123");
         clicarSignInForm();
         validarLogin();
+        gerarScreenshot();
+        fecharNavegador();
     }
 
     @Test
     public void realizarLoginInvalido(){
         clicarSignIn();
-        digitarLogin("");
+        digitarLogin();
         digitarPassword("123");
         clicarSignInForm();
         validarToastLoginInvalido();
+        gerarScreenshot();
+        fecharNavegador();
     }
 
 }

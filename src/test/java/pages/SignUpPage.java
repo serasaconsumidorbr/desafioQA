@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 
+import java.util.Random;
+
 import static org.junit.Assert.assertEquals;
 
 public class SignUpPage extends LoginPage {
@@ -14,7 +16,8 @@ public class SignUpPage extends LoginPage {
         navegador.findElement(By.name("name")).sendKeys(name);
     }
 
-    public void digitarLogin(String login){
+
+    public void digitarLoginJaExistente(String login){
         navegador.findElement(By.name("login")).sendKeys(login);
     }
 
