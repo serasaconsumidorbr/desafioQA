@@ -6,6 +6,6 @@ describe('login Senha Invalida', () => {
     it('efetuando login com cpf válido e senha invalida', () => {
         cy.loginSenhaInvalida()
 
-        cy.get().contains('Dados incorretos. Confira seu usuário e senha e tente novamente')
+        cy.get('.field-error__item').contains('Dados incorretos. Confira seu usuário e senha e tente novamente')
     });
 });
