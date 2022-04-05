@@ -1,45 +1,39 @@
 # Desafio QA
 
-## Objetivo do Desafio
-A proposta deste Desafio é analisar as suas habilidades em conceber cenários de testes, programação e boas práticas necessárias para automatização dos testes.
-Vamos considerar e avaliar todas etapas, então faça com calma e não tenha medo de errar ! Caso tenha dúvidas referentes ao Desafio, sinta-se a vontade para entrar em contato com nosso time de QA's.
-Você terá liberdade para escolher a linguagem de programação e ferramentas utilizadas na automatização dos testes.
-Atenção para as **Dicas** de cada etapa, não são obrigatórias mas podem somar mais pontos no desafio.
-A terceira parte do Desafio não é obrigatória mas também soma mais pontos no desafio.
-
-
-
 ## O Desafio
 
 ### 1. Escolher a plataforma & escrita de cenários
 
-Nós da Serasa estamos nos mais diversos canais digitais.
-Nesta primeira parte do desafio, você deverá:
-* escolher a plataforma de sua preferência, seja ela **Web(https://www.serasa.com.br/), Android/iOS**.
-* escrever ao menos 5 cenários de teste em **BDD**.
-* explicar e detalhar o porquê escolheu esses cenários. 
+*Foi escolhido a plataforma WEB*
 
-
-Dica: **Escolher mais de uma plataforma renderá mais pontos para sua nota**
-Dica: **Escrever mais cenários de teste renderá mais pontos para sua nota**
+As escritas dos cenários estão descritos no link https://docs.google.com/spreadsheets/d/1KYRMG9O-N64ae4vsULZlciel9wfWlnz8ZgcLHGqyjw0/edit?usp=sharing
 
 
 ### 2. Automação de testes de interface de usuário
 
-Nesta etapa, você precisa criar uma suite de testes automatizada para pelo menos 3 dos cenários que foram escritos na primeira parte deste desafio, em suas respectivas plataformas.
-* explicar e detalhar as decisões que você tomou (exemplo: o porquê escolheu determinada linguagem de programação, framework etc). 
-* Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
+*Foram criados testes automatizados para 5 fluxos descritos na planilha acima.
+*Foi utilizado o Cypress como framework escrito em Javascript, sendo um dos framworks de automações que cresce bastante, tem uma comunidade ativa e pode ser usado também para testes de API, acredito que hoje é a melhor escolha para automatizações front.
+
+* Para executar a suite de testes deve-se fazer o clone desse projeto, executar o comando "npx cypress open".
+* Deve criar um .json na raiz do projeto com o nome "cypress.env.json" e alterar o exemplo abaixo com um login valido do serasa:
+{
+    "cpfValido": "inserir cpf valido",
+    "senhaValida": "inserir senha valida",
+
+    "cpfInvalido": "12345678910",
+    "senhainvalida": "12345678"
+  }
 
 Dica: **Fazer testes automatizados em plataformas diferentes (Web, Android ou iOS) renderá mais pontos para sua nota**
 
 
 ### 3. Testes de API **(Extra)**
 
-Esta última etapa do Desafio não é obrigatória, mas rende pontos extras.
-Você deve criar uma suite de testes (automatizada ou não) com a API de filmes: https://www.themoviedb.org/
-* Tente focar em cenários críticos, focando em testes de contrato.
-* explicar e detalhar as decisões que você tomou (exemplo: o porquê escolheu determinada linguagem de programação, framework etc). 
-* Em seu README, detalhar como realizar as configurações necessárias para rodar o projeto em nossa máquina local.
+Foi criado dois testes no postman apenas para validar conhecimento.
+
+* Para executar deve-se ter instalado o postman e o newman
+* Para acessar deve acessar o link https://app.getpostman.com/join-team?invite_code=748596f2468eeadcab50d78ab0e36c2e&ws=9bf01ba7-4bdd-4450-bcc8-e1c467dc2e85
+* Para executar em linha de comando deve exportar a Collection para um diretório e executar o comando "$ newman run SUA_COLLECTION"
 
 Dica: **Fazer testes automatizados renderá mais pontos para sua nota**
 
